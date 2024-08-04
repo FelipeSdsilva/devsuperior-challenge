@@ -60,11 +60,12 @@ public class TaxPayer {
     }
 
     public Double salaryTax() {
-        if (salaryIncome <= 30000) {
+        Double salaryPerMonth = getSalaryIncome() / 12;
+        if (salaryPerMonth <= 3000) {
             return 0.0;
-        } else if (salaryIncome <= 50000) {
+        } else if (salaryPerMonth > 3000 && salaryPerMonth  <= 5000){
             return salaryIncome * 0.10;
-        } else {
+        } else{
             return salaryIncome * 0.20;
         }
     }
