@@ -62,7 +62,7 @@ public class TaxPayer {
     public Double salaryTax() {
         if (salaryIncome <= 30000) {
             return 0.0;
-        } else if (salaryIncome <= 60000) {
+        } else if (salaryIncome <= 50000) {
             return salaryIncome * 0.10;
         } else {
             return salaryIncome * 0.20;
